@@ -3,11 +3,12 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "https://archive.org/download/SomeWindows8BetaISOs/WindowsDeveloperPreview-32bit-English.iso"
-      MANUAL: "Y"
-      DISK_SIZE: "45G"
+      VERSION: "https://archive.org/download/windows-developer-preview-64bit-english/WindowsDeveloperPreview64bitEnglish.iso"
+      RAM_SIZE: "8G" 
+      CPU_CORES: "1"
+      DISK_SIZE: "50G"
       DISK_TYPE: "ide"
-      RAM_SIZE: "8G"      
+      MANUAL: "Y"      
     devices:
       - /dev/kvm
       - /dev/net/tun
