@@ -3,7 +3,11 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "11"
+      VERSION: "https://archive.org/download/SomeWindows8BetaISOs/WindowsDeveloperPreview-32bit-English.iso"
+      MANUAL: "Y"
+      DISK_SIZE: "45G"
+      DISK_TYPE: "ide"
+      RAM_SIZE: "8G"      
     devices:
       - /dev/kvm
       - /dev/net/tun
@@ -15,5 +19,6 @@ services:
       - 3389:3389/udp
     volumes:
       - ./windows:/storage
+      - ./winc:/data
     restart: always
     stop_grace_period: 2m
