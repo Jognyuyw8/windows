@@ -3,9 +3,9 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "https://archive.org/download/windows-developer-preview-64bit-english/WindowsDeveloperPreview64bitEnglish.iso"
-      RAM_SIZE: "8G" 
-      CPU_CORES: "1"
+      VERSION: "https://archive.org/download/debombed-8102/Debombed%208102.iso"
+      RAM_SIZE: "6G" 
+      CPU_CORES: "2"
       DISK_SIZE: "50G"
       DISK_TYPE: "ide"
       MANUAL: "Y"      
@@ -21,5 +21,6 @@ services:
     volumes:
       - ./windows:/storage
       - ./winc:/data
+      - ./virt:/oem
     restart: always
     stop_grace_period: 2m
