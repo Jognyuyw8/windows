@@ -3,12 +3,10 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "https://archive.org/download/debombed-8102/Debombed%208102.iso"
-      RAM_SIZE: "6G" 
-      CPU_CORES: "2"
-      DISK_SIZE: "50G"
-      DISK_TYPE: "ide"
-      MANUAL: "Y"      
+      VERSION: "2008r2"
+      RAM_SIZE: "8G" 
+      CPU_CORES: "1"
+      DISK_SIZE: "50G" 
     devices:
       - /dev/kvm
       - /dev/net/tun
