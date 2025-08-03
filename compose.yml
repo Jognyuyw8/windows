@@ -3,12 +3,13 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "https://archive.org/download/4074_twiwmtb/lh_usa_4074_x86fre_pro-dvd.iso"
-      RAM_SIZE: "8G" 
-      CPU_CORES: "2"
+      VERSION: "xp"
+      RAM_SIZE: "8G"
+      CPU_CORES: "1"
       DISK_SIZE: "50G"
       DISK_TYPE: "ide"
       MANUAL: "Y"
+      BOOT_MODE: "windows_legacy"
     devices:
       - /dev/kvm
       - /dev/net/tun
