@@ -3,7 +3,7 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "xp"
+      VERSION: "https://www.hirensbootcd.org/files/HBCD_PE_x64.iso"
       RAM_SIZE: "8G"
       CPU_CORES: "1"
       DISK_SIZE: "50G"
