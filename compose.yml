@@ -3,12 +3,11 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "https://archive.org/download/debombed-8250/Debombed%208250.iso"
-      RAM_SIZE: "8G"
-      CPU_CORES: "3"
+      VERSION: "tiny10"
+      RAM_SIZE: "7G"
+      CPU_CORES: "1"
       DISK_SIZE: "50G"
-      DISK_TYPE: "ide"
-      MANUAL: "Y"
+      DISK2_SIZE: "35G"
     devices:
       - /dev/kvm
       - /dev/net/tun
@@ -20,6 +19,7 @@ services:
       - 3389:3389/udp
     volumes:
       - ./windows:/storage
+      - ./longhorn:/storage
       - ./winc:/data
       - ./virt:/oem
     restart: always
