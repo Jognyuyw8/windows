@@ -3,13 +3,12 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "https://archive.org/download/thelonghornarchive/Windows%20Vista%20build%205365.8%20%28x86%29.iso"
+      VERSION: "https://archive.org/download/debombed-8250/Debombed%208250.iso"
       RAM_SIZE: "8G"
-      CPU_CORES: "1"
+      CPU_CORES: "3"
       DISK_SIZE: "50G"
       DISK_TYPE: "ide"
       MANUAL: "Y"
-      BOOT_MODE: "windows_legacy"
     devices:
       - /dev/kvm
       - /dev/net/tun
