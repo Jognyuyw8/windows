@@ -3,7 +3,7 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "2k"
+      VERSION: "https://archive.org/download/thelonghornarchive/Windows%20Vista%20build%205365.8%20%28x86%29.iso"
       RAM_SIZE: "8G"
       CPU_CORES: "1"
       DISK_SIZE: "50G"
