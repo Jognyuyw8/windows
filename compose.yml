@@ -9,7 +9,7 @@ services:
       DISK_SIZE: "50G"
       DISK2_SIZE: "35G"
       MANUAL: "Y"
-      BOOT_MODE: "windows_plain"
+      TPM: "Y"
     devices:
       - /dev/kvm
       - /dev/net/tun
