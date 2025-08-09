@@ -3,11 +3,12 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "tiny10"
+      VERSION: "https://www.hirensbootcd.org/files/HBCD_PE_x64.iso"
       RAM_SIZE: "7G"
       CPU_CORES: "1"
       DISK_SIZE: "50G"
       DISK2_SIZE: "35G"
+      NETWORK: "Y"
     devices:
       - /dev/kvm
       - /dev/net/tun
@@ -19,7 +20,7 @@ services:
       - 3389:3389/udp
     volumes:
       - ./windows:/storage
-      - ./longhorn:/storage
+      - ./longhorn:/storage2
       - ./winc:/data
       - ./virt:/oem
     restart: always
