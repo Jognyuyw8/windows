@@ -3,12 +3,13 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "https://www.hirensbootcd.org/files/HBCD_PE_x64.iso"
-      RAM_SIZE: "7G"
+      VERSION: "https://archive.org/download/WINSERVER_NICKEL_VNEXTPREVIEW_22509_STANDARD_DATACENTER_EN-US/Windows_InsiderPreview_Server_vNext_en-us_22509.iso"
+      RAM_SIZE: "8G"
       CPU_CORES: "1"
       DISK_SIZE: "50G"
       DISK2_SIZE: "35G"
-      NETWORK: "Y"
+      MANUAL: "Y"
+      BOOT_MODE: "windows_plain"
     devices:
       - /dev/kvm
       - /dev/net/tun
