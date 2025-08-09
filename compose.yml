@@ -3,12 +3,11 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "https://archive.org/download/WINSERVER_NICKEL_VNEXTPREVIEW_22509_STANDARD_DATACENTER_EN-US/Windows_InsiderPreview_Server_vNext_en-us_22509.iso"
+      VERSION: "https://archive.org/download/win11insider-22000-160/22000.160.210813-1628.CO_RELEASE_SVC_PROD2_CLIENTMULTI_X64FRE_EN-US.ISO"
       RAM_SIZE: "8G"
       CPU_CORES: "1"
       DISK_SIZE: "50G"
       DISK2_SIZE: "35G"
-      MANUAL: "Y"
       TPM: "Y"
     devices:
       - /dev/kvm
